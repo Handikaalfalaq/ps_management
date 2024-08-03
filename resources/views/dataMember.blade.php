@@ -75,3 +75,18 @@
         </div>
       </section>
 </x-layout>
+
+
+{{-- nama
+foto
+nomor hp
+jenis kelamin
+alamat
+member id
+
+history sewa :
+	1.no
+	2.jam
+	3.tanggal
+	4.total waktu
+	5.biaya --}}
