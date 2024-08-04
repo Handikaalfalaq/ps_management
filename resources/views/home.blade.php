@@ -1,4 +1,12 @@
-<x-layout>
-    <x-slot:title>{{ $title }}</x-slot:title>
-    <h3 class="text-xl">ini Halaman Home</h3>
-</x-layout>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{{ $title }}</title>
+</head>
+<body>
+    <x-layout :title="$title">
+        <h3 class="text-xl">Ini Halaman Home</h3>
+        <div class="text-xl">Handika Al Falaq</div>
+    </x-layout>
+</body>
+</html>

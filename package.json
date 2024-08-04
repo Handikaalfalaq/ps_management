@@ -13,5 +13,14 @@
         "postcss": "^8.4.39",
         "tailwindcss": "^3.4.6",
         "vite": "^5.0"
+    },
+    "dependencies": {
+        "@emotion/react": "^11.13.0",
+        "@emotion/styled": "^11.13.0",
+        "@mui/icons-material": "^5.16.4",
+        "@mui/material": "^5.16.4",
+        "react-perfect-scrollbar": "^1.5.8",
+        "react-router-dom": "^6.25.1",
+        "reactstrap": "^9.2.2"
     }
 }

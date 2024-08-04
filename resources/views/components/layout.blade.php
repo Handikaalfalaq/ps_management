@@ -1,3 +1,5 @@
+@props(['title'])
+
 <!DOCTYPE html>
 <html lang="en" class="h-full bg-gray-100">
 <head>
@@ -7,20 +9,23 @@
     @vite(['resources/css/app.css','resources/js/app.js'])
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-    <title>Home</title>
+    <link rel="stylesheet" href="https://kit.fontawesome.com/d8072d68f9.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <title>{{ $title }}</title>
 </head>
 <body class="h-full"> 
-<div class="min-h-full">
+<div x-data="{ isOpen: true }" @button-navbar.window="isOpen = $event.detail">
     <x-navbar></x-navbar>
-  
-    <x-header>{{ $title }}</x-header>
 
-    <main>
-      <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-        {{ $slot }}
-      </div>
-    </main>
+    <header class="bg-white shadow" :class="isOpen ? 'ml-48' : 'ml-16'">
+        <div class="max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
+            <h1 class="text-3xl font-bold leading-tight text-gray-900">{{ $title }}</h1>
+        </div>
+    </header>
+
+    <div :class="isOpen ? 'ml-48' : 'ml-16'" class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
+      {{ $slot }}
+    </div>
   </div>
-      
 </body>
 </html>

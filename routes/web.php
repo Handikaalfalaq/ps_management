@@ -1,31 +1,24 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\DataTransaksiController;
+use App\Http\Controllers\LaporanTransaksiController;
+use App\Http\Controllers\DataMemberController;
+use App\Http\Controllers\DataPerangkatController;
+use App\Http\Controllers\DataPetugasController;
+use App\Http\Controllers\SettingAppController;
 
-Route::get('/', function () {
-    return view('home', ['title' => 'Home Page']);
-});
+Route::get('/', [HomeController::class, 'home']);
 
-Route::get('/dataTransaksi', function () {
-    return view('dataTransaksi', ['title' => 'Data Transaksi Page']);
-});
+Route::get('/dataTransaksi', [DataTransaksiController::class, 'dataTransaksi']);
 
-Route::get('/laporanTransaksi', function () {
-    return view('laporanTransaksi', ['title' => 'Laporan Transaksi Page']);
-});
+Route::get('/laporanTransaksi', [LaporanTransaksiController::class, 'laporanTransaksi']);
 
-Route::get('/dataMember', function () {
-    return view('dataMember', ['title' => 'Data Member Page']);
-});
+Route::get('/dataMember', [DataMemberController::class, 'dataMember']);
 
-Route::get('/dataPerangkat', function () {
-    return view('dataPerangkat', ['title' => 'Data Perangkat Page']);
-});
+Route::get('/dataPerangkat', [DataPerangkatController::class, 'dataPerangkat']);
 
-Route::get('/dataPetugas', function () {
-    return view('dataPetugas', ['title' => 'Data Petugas Page']);
-});
+Route::get('/dataPetugas', [DataPetugasController::class, 'dataPetugas']);
 
-Route::get('/settingApp', function () {
-    return view('settingApp', ['title' => 'Setting App Page']);
-});
+Route::get('/settingApp', [SettingAppController::class, 'settingApp']);
