@@ -1,5 +1,5 @@
 <aside 
-    x-data="{ isOpen: true, logoIsOpen: true }" 
+    x-data="{ isOpen: true, logoIsOpen: true }"
     x-init="$watch('logoIsOpen', value => { isOpen = value; })"
     @mouseover="if (!logoIsOpen) { isOpen = true; $dispatch('button-navbar', isOpen); }"
     @mouseleave="if (!logoIsOpen) { isOpen = false; $dispatch('button-navbar', isOpen); }"
